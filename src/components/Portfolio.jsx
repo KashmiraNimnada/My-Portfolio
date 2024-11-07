@@ -3,6 +3,28 @@ import myPortfolio from "../assets/myPortfolio.png"
 import eCommerceWeb from "../assets/eCommerceWeb.png"
 
 const Portfolio = () => {
+
+  const portfolios = [
+    {
+      id: 1,
+      src: myPortfolio,
+      name: "My Portfolio",
+      href: "https://github.com/KashmiraNimnada/My-Portfolio/tree/main",
+    },
+    {
+      id: 2,
+      src: eCommerceWeb,
+      name: "E-Commerce Website Backend",
+      href: "https://github.com/KashmiraNimnada/E-Commerce-Website-back-end.git",
+    },
+    {
+      id: 3,
+      src: eCommerceWeb,
+      name: "E-Commerce Website Frontend",
+      href: "https://github.com/KashmiraNimnada/E-Commerce-Website-front-end.git",
+    },
+  ]
+
   return (
     <div name="portfolio" className="bg-gradient-to-b from-black to-gray-800 text-white w-full md:h-screen">
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
@@ -13,25 +35,14 @@ const Portfolio = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-
-              <div className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300">
-                <a href="https://github.com/KashmiraNimnada/My-Portfolio/tree/main" target="blank">
-                  <img src={myPortfolio} alt="" className="rounded-t-xl"/>
-                  <p className="text-center">My portfolio</p>
-                </a>
-              </div>
-              <div className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300">
-                <a href="https://github.com/KashmiraNimnada/E-Commerce-Website-back-end.git" target="blank">
-                  <img src={eCommerceWeb} alt="" className="rounded-t-xl"/>
-                  <p className="text-center">Backend of an E-Commerce Website</p>
-                </a>
-              </div>
-              <div className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300">
-                <a href="https://github.com/KashmiraNimnada/E-Commerce-Website-front-end.git" target="blank">
-                  <img src={eCommerceWeb} alt="" className="rounded-t-xl"/>
-                  <p className="text-center">Frontend of an E-Commerce Website</p>
-                </a>
-              </div>
+                {portfolios.map(({id,src,href,name}) => (
+                  <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+                    <a href={href} target="_blank" rel="noreferrer">
+                      <img src={src} alt="" className="rounded-md duration-200 hover:scale-105"/>
+                      <p className="text-center">{name}</p>
+                    </a>
+                  </div>
+                ))}
             </div>
 
         </div>
