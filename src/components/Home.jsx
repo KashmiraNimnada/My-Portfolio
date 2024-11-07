@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import me from "../assets/me.png"
+import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
@@ -14,12 +15,12 @@ const Home = () => {
                     Currently, I love to work on web application using technologies like React,Spring boot,MySQL,Tailwind.
                 </p>
                 <div>
-                    <button className="text-white group flex py-3 px-6 my-2 items-center cursor-pointer rounded-md bg-gradient-to-r from-cyan-500 to-blue-500">
+                    <Link to="portfolio" smooth duration={500} className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
                         portfolio
                         <span className="pt-0.3 group-hover:rotate-90 duration-300">
                             <MdOutlineKeyboardArrowRight size={25} className="ml-1"/>
                         </span>
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div>

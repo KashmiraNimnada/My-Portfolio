@@ -1,4 +1,6 @@
 import React from 'react'
+import myPortfolio from "../assets/myPortfolio.png"
+import eCommerceWeb from "../assets/eCommerceWeb.png"
 
 const Portfolio = () => {
   return (
@@ -12,17 +14,24 @@ const Portfolio = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
 
-              <div className="shadow-md shadow-gray-600 rounded-lg">
-
-                <img src="" alt="" />
-
-                <div className="flex items-center justify-center">
-                  <button className="w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200">Demo</button>
-                  <button className="w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200">Code</button>
-                </div>
-
+              <div className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300">
+                <a href="https://github.com/KashmiraNimnada/My-Portfolio/tree/main" target="blank">
+                  <img src={myPortfolio} alt="" className="rounded-t-xl"/>
+                  <p className="text-center">My portfolio</p>
+                </a>
               </div>
-      
+              <div className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300">
+                <a href="https://github.com/KashmiraNimnada/E-Commerce-Website-back-end.git" target="blank">
+                  <img src={eCommerceWeb} alt="" className="rounded-t-xl"/>
+                  <p className="text-center">Backend of an E-Commerce Website</p>
+                </a>
+              </div>
+              <div className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300">
+                <a href="https://github.com/KashmiraNimnada/E-Commerce-Website-front-end.git" target="blank">
+                  <img src={eCommerceWeb} alt="" className="rounded-t-xl"/>
+                  <p className="text-center">Frontend of an E-Commerce Website</p>
+                </a>
+              </div>
             </div>
 
         </div>
