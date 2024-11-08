@@ -1,6 +1,7 @@
 import React from 'react'
 import myPortfolio from "../assets/myPortfolio.png"
 import eCommerceWeb from "../assets/eCommerceWeb.png"
+import standeloneApp from "../assets/standeloneApp.png"
 
 const Portfolio = () => {
 
@@ -22,6 +23,12 @@ const Portfolio = () => {
       src: eCommerceWeb,
       name: "E-Commerce Website Frontend",
       href: "https://github.com/KashmiraNimnada/E-Commerce-Website-front-end.git",
+    },
+    {
+      id: 4,
+      src: standeloneApp,
+      name: "standelone app for supermarket",
+      href: "https://github.com/KashmiraNimnada/standalone-application-for-a-supermarket.git",
     },
   ]
 
